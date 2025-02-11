@@ -159,9 +159,11 @@ def palindrome(word):
         rev += cleaned[i]
         
     if cleaned == rev: #cleaned == cleaned[::-1]
-        print("The string is a palindrome.")
+        # print("The string is a palindrome.")
+        return 0
     else:
-        print("The string is not a palindrome.")
+        # print("The string is not a palindrome.")
+        return -1
         
 def palindromeVersion2(word):
     cleaned = ''.join(ch.lower() for ch in word if ch.isalnum())
@@ -171,6 +173,20 @@ def palindromeVersion2(word):
     else:
         print("The string is not a palindrome.")
         return -1
+    
+def palindrome_stack_queue(word):
+    stack = Stack()
+    queue = Queue()
+    
+    for ch in word:
+        if ch.isalnum():
+            stack.push(ch.lower())
+            queue.enqueue(ch.lower())
+    
+    while not stack.isEmpty() and not queue.isEmpty():
+        if stack.pop() != queue.dequeue():
+            return -1
+    return 0
         
 # 4. Write a function balanced() that determines if an expression comprised of the characters
 # ()[]{} is balanced. The function accepts a single parameter: the expression (a string). The function
@@ -235,6 +251,19 @@ def main():
     else:
         print("The string is not a palindrome.")
     print()
+    
+    test_strings = [
+    "A man a plan a canal Panama",
+    "Superman in the sky",
+    "racecar",
+    "No lemon, no melon!"]
+    
+    for test in test_strings:
+        result = palindrome_stack_queue(test)
+        if result == 0:
+            print(f"\"{test}\" is a palindrome.")
+        else:
+            print(f"\"{test}\" is not a palindrome.")
 
     # Test 4: balanced() for Expressions
     expressions = ["()", "([])", "{[]()[]}", "{{)]", "[({{)])"]

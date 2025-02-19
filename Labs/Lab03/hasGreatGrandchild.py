@@ -29,7 +29,7 @@ def hasGreatGrandchild(node):
     rightHeight = hasGreatGrandchild(node.right)
     currentHeight = 1 + max(leftHeight, rightHeight)
     # Stopping condition
-    if currentHeight >= 4:
+    if currentHeight >= 3:
         print(node.item, end=" ")
     
     return currentHeight

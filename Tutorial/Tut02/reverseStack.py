@@ -25,6 +25,8 @@ class LinkedList:
         return temp
     
     def insert_node(self, index,data):
+        if index < 0 or index > self.size:
+            raise IndexError("Index out of range")
         new_node = Node(data)
         if index == 0:
             new_node.next = self.head
@@ -72,9 +74,9 @@ class Stack:
         self.ll = LinkedList()
         
     def push(self, data):
-        self.ll.insert_node(data, 0)
+        self.ll.insert_node(0, data)
     
-    def pop(self, data):
+    def pop(self):
         if self.isEmpty():
             return None
         topData = self.ll.head.data
@@ -100,7 +102,7 @@ class Queue:
         self.ll = LinkedList()
         
     def enqueue(self, data):
-        self.ll.insert_node(data, self.ll.size)
+        self.ll.insert_node(self.ll.size, data)
     
     def dequeue(self):
         if self.isEmpty():

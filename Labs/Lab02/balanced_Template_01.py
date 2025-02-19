@@ -95,6 +95,7 @@ class Stack:
 def balanced(expression):
 # Write your code here #
 
+
 if __name__ == "__main__":
     expressions = ["()", "[()]", "{[]()[]}", "[({{)])"]
     for expr in expressions:

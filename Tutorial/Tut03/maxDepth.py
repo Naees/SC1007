@@ -37,10 +37,11 @@ class Stack:
         return self.top is None
 
 def inOrderTraversal(node):
-    if node:
-        inOrderTraversal(node.left)
-        print(node.data, end=" ")
-        inOrderTraversal(node.right)
+    if node is None:
+        return
+    inOrderTraversal(node.left)
+    print(node.data, end=" ")
+    inOrderTraversal(node.right)
 
 def maxDepth(node):
     if node is None:

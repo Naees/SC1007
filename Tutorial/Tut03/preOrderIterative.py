@@ -55,10 +55,11 @@ def preOrderIterative(root):
             stack.push(current.left)
             
 def preOrderIterativeLecture(node):
-    if node:
-        print(node.data, end=" ")
-        preOrderIterativeLecture(node.left)
-        preOrderIterativeLecture(node.right)
+    if node is None:
+        return
+    print(node.data, end=" ")
+    preOrderIterativeLecture(node.left)
+    preOrderIterativeLecture(node.right)
         
 
 def insert(data, current_node):
@@ -95,5 +96,6 @@ if __name__ == "__main__":
 
     print("Pre-Order Traversal:")
     preOrderIterative(root)
+    print()
     print("Pre-Order Traversal with Lecture method:")
     preOrderIterative(root)

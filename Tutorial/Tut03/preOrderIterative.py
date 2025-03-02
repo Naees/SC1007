@@ -57,8 +57,8 @@ def preOrderIterative(root):
 def preOrderIterativeLecture(node):
     if node:
         print(node.data, end=" ")
-    preOrderIterativeLecture(node.left)
-    preOrderIterativeLecture(node.right)
+        preOrderIterativeLecture(node.left)
+        preOrderIterativeLecture(node.right)
         
 
 def insert(data, current_node):

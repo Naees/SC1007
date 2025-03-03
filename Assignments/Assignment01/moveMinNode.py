@@ -81,6 +81,27 @@ def moveMinNode(head):
     head = minLL.next if minLL.next else otherLL.next
     return head
     
+def moveMinNode2(head):
+    if head is None or head.next is None:
+        return head
+    minimumValue = head.data
+    current = head
+    while current:
+        if current.data < minimumValue:
+            minimumValue = current.data
+        current = current.next
+    current = head
+    
+    # Restart the loop and append them all to the front
+    while current and current.next:
+        if current.next.data == minimumValue:
+            temp = current.next
+            current.next = current.next.next
+            temp.next = head
+            head = temp
+        current = current.next
+    return head
+
 if __name__ == "__main__":
     linked_list = LinkedList()
     

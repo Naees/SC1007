@@ -71,8 +71,27 @@ class LinkedList:
            cur = cur.next
        print("None")
        
-def sortSublist(head, start, end):
+# def reverseList(head):
+#     prev = None
+#     current = head
+#     while current:
+#         nextNode = current.next
+#         current.next = prev
+#         prev = current
+#         current = nextNode
+#     return prev
 
+def reverseList(head):
+    if head is None:
+        return None
+    current = head
+    prev = None
+    while current:
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
+    return prev
         
 if __name__ == "__main__":
    linked_list = LinkedList()
@@ -91,6 +110,6 @@ if __name__ == "__main__":
   
    print("\nBefore:", end=" ")
    linked_list.printList()
-   linked_list.head = sortSublist(linked_list.head, 2, 4)
+   linked_list.head = reverseList(linked_list.head)
    print("After:", end=" ")
    linked_list.printList()

@@ -1,0 +1,67 @@
+Question 1
+Max. score: 5.00
+The average-case time complexity of binary search is
+
+A) Big Omega(n log(n))
+B) Big Omega(log (n))
+C) Big O(log(n))
+D) Big 0(n log(n))
+
+ANS: B and case
+===========================================================================================================================
+Q2. 
+Consider the python codes given below. Assume that the array listA contains n (> 0) elements, sorted in ascending order.
+
+def process _array(listA, x, n) :
+    1 = 0
+    j= n - 1
+    while i <= j:
+        k = (i + j) // 2
+        if x <= listA[k]:
+            j = k - 1
+        if listA[k] <= x:
+            i = k + 1
+    if listA[k] = x:
+        return k
+    else:
+        return -1
+
+Which one of the following statements about the function ProcessArray is CORRECT?
+It will run into an infinite loop when x is not in listA.
+ ANS: It Is an Implementation of binary search.
+It will always find the maximum element in listA.
+It will return -1 even when x Is present in listA.
+===========================================================================================================================
+Question 3
+Max. score: 5.00
+The worst and average complexity of sequential search are
+
+A) Big Theta((n+1)/2) and Big Omega(n log(n)) respectively
+B) Big Theta(n) and Big O(n) respectively
+C) Big Omega((n-1)/2) and Big O(n) respectively
+D) Big Theta(n) and Big Theta(n) respectively
+
+ANS: D is correct
+C and D are correct
+B, C and D are correct
+A, B, C and D are correct
+===========================================================================================================================
+Question 4
+Max. score: 5.00
+
+Consider a sorted array of n numbers. What would be the time complexity of the best known algorithm to find a
+pair 'a' and 'b' such that la-bl = k, k being a positive integer.
+
+ANS: O(п)
+O(n log n)
+O(n^2)
+O(log n)
+===========================================================================================================================
+Question 5
+Max. score: 5.00
+The average number of key comparisons done in a successful sequential search in a list of length n is
+
+log n
+(n-1) /2
+n/2
+ANS: (n+1) /2

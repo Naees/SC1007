@@ -17,7 +17,7 @@ def find_smallest_greater(arr, x):
     startIndex = 0
     endIndex = len(arr)
 
-    while startIndex < endIndex:
+    while startIndex <= endIndex:
         mid = (startIndex + endIndex) // 2
 
         # If the mid element is x

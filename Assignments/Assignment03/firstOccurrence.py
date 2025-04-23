@@ -25,7 +25,7 @@ def first_occurrence(arr, target):
     endIndex = len(arr)
     first_index = -1 
 
-    while startIndex < endIndex:
+    while startIndex <= endIndex:
         mid = (startIndex + endIndex) // 2
 
         # mid is target
